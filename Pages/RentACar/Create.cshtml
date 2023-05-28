@@ -1,0 +1,89 @@
+﻿@page
+@model L2Ex2.Pages.RentACar.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Reservations</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Reservations.ReservationDate" class="control-label">Date of Reservation</label>
+                <input asp-for="Reservations.ReservationDate" class="form-control" />
+                <span asp-validation-for="Reservations.ReservationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.StartDate" class="control-label">Date of Start</label>
+                <input asp-for="Reservations.StartDate" class="form-control" />
+                <span asp-validation-for="Reservations.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.EndDate" class="control-label">Date of End</label>
+                <input asp-for="Reservations.EndDate" class="form-control" />
+                <span asp-validation-for="Reservations.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.Name" class="control-label">Name</label>
+                <input asp-for="Reservations.Name" class="form-control" />
+                <span asp-validation-for="Reservations.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.Surname" class="control-label">Surname</label>
+                <input asp-for="Reservations.Surname" class="form-control" />
+                <span asp-validation-for="Reservations.Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.PhoneNumber" class="control-label">Phone Number</label>
+                <input asp-for="Reservations.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Reservations.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.Contact" class="control-label">Contact</label>
+                <input asp-for="Reservations.Contact" class="form-control" />
+                <span asp-validation-for="Reservations.Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.CarPlate" class="control-label">Car Plate number</label>
+                <input asp-for="Reservations.CarPlate" class="form-control" />
+                <span asp-validation-for="Reservations.CarPlate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.VinNumber" class="control-label">VIN</label>
+                <input asp-for="Reservations.VinNumber" class="form-control" />
+                <span asp-validation-for="Reservations.VinNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.Brand" class="control-label">Brand of Car</label>
+                <input asp-for="Reservations.Brand" class="form-control" />
+                <span asp-validation-for="Reservations.Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.Model" class="control-label">Model</label>
+                <input asp-for="Reservations.Model" class="form-control" />
+                <span asp-validation-for="Reservations.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reservations.Describe" class="control-label">Describe</label>
+                <input asp-for="Reservations.Describe" class="form-control" />
+                <span asp-validation-for="Reservations.Describe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
